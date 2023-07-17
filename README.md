@@ -1,6 +1,6 @@
 # red_squirrel
 
-A new Flutter project.
+UK Citizen Test App 
 
 ## Getting Started
 
