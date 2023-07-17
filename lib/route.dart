@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:red_squirrel/views/full_test/test_page.dart';
 import 'package:red_squirrel/views/home/home_page.dart';
 // import 'package:red_squirrel/views/splash/splash_page.dart';
 
@@ -25,7 +26,7 @@ List<Page<dynamic>> onGenerateAppViewPages(
   // } else {
   //   return [HomePage.page()];
   // }
-  return [HomePage.page()];
+  return [FullTestPage.page()];
 }
 
 PageRouteState getRouteState() {

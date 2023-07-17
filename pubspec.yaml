@@ -39,6 +39,8 @@ dependencies:
   flutter_bloc: ^8.1.3
   flow_builder: ^0.0.9
   flutter_svg: ^2.0.7
+  getwidget: ^3.1.1
+  blurrycontainer: ^1.0.2
 
 dev_dependencies:
   flutter_test:

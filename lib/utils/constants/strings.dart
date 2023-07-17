@@ -11,4 +11,6 @@ class Strings {
   static const String homeUpdateQuestion = "Do you want to update?";
   static const String homeUpdateComment = "Question data was updated.";
   static const String homeUpdateButton = "Update";
+  static const String fullTestCaption = "Full test";
+  static const String submitButton = "submit";
 }
