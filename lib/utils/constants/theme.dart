@@ -6,19 +6,17 @@ class AppTheme {
   static ThemeData lightTheme() => ThemeData(
       fontFamily: Fonts.primaryFont,
       colorScheme: ColorScheme.fromSeed(
-          seedColor: ThemeColors.primary,
-          brightness: Brightness.light,
-          primary: ThemeColors.primary,
-          onPrimary: ThemeColors.onPrimary,
-          secondary: ThemeColors.secondary,
-          onSecondary: ThemeColors.onSecondary,
-          outline: ThemeColors.border,
-          onSurface: ThemeColors.label,
-          background: ThemeColors.background,
-          onBackground: ThemeColors.input),
+        seedColor: ThemeColors.primary,
+        brightness: Brightness.light,
+        primary: ThemeColors.primary,
+        secondary: ThemeColors.secondary,
+        outline: ThemeColors.border,
+        onSurface: ThemeColors.label,
+        background: ThemeColors.background,
+      ),
       checkboxTheme: CheckboxThemeData(
           checkColor:
-              MaterialStateProperty.resolveWith((_) => ThemeColors.onSecondary),
+              MaterialStateProperty.resolveWith((_) => ThemeColors.primary),
           fillColor:
               MaterialStateProperty.resolveWith((_) => ThemeColors.secondary),
           shape:
