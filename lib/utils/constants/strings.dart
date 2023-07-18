@@ -1,5 +1,4 @@
 class Strings {
-  static const List<String> title = ["LIFE", "IN", "THE", "UK"];
   static const String subTitle1 = "LIFE";
   static const String subTitle2 = "IN";
   static const String subTitle3 = "THE";
@@ -10,5 +9,6 @@ class Strings {
   static const String homeStartButton = "Start";
   static const String homeUpdateQuestion = "Do you want to update?";
   static const String homeUpdateComment = "Question data was updated.";
+  static const String homeUpdateDate = "07/12/2023";
   static const String homeUpdateButton = "Update";
 }

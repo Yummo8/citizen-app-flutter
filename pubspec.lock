@@ -173,6 +173,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.4.1"
+  indexed:
+    dependency: "direct main"
+    description:
+      name: indexed
+      sha256: "3509a2a7ad1dbd7280da377661129e0b0a2f5e8d6d75f10400f07397f95324df"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.8"
   intl:
     dependency: transitive
     description:
@@ -309,6 +317,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
+  pressable:
+    dependency: "direct main"
+    description:
+      name: pressable
+      sha256: "110c4980aad24a35274ab55900eb6b626d22aea88e5b32c6cde80dc58bc36a39"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.5.0"
   provider:
     dependency: transitive
     description:
