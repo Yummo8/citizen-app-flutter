@@ -99,7 +99,7 @@ class _ProgressBarState extends State<ProgressBar> {
           backgroundColor: widget.foregroundColor,
           progressBarColor: widget.backgroundColor,
           animation: true,
-          animationDuration: 120,
+          animationDuration: 160,
           animateFromLastPercentage: true,
         ),
       ],

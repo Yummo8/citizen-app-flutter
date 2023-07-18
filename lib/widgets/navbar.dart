@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:red_squirrel/utils/constants/colors.dart';
-import 'package:red_squirrel/utils/constants/fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:red_squirrel/utils/constants/resources.dart';
