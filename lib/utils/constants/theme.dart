@@ -9,17 +9,14 @@ class AppTheme {
         seedColor: ThemeColors.primary,
         brightness: Brightness.light,
         primary: ThemeColors.primary,
-        onPrimary: ThemeColors.onPrimary,
         secondary: ThemeColors.secondary,
-        onSecondary: ThemeColors.onSecondary,
         outline: ThemeColors.border,
         onSurface: ThemeColors.label,
         background: ThemeColors.background,
-        onBackground: ThemeColors.input,
       ),
       checkboxTheme: CheckboxThemeData(
           checkColor:
-              MaterialStateProperty.resolveWith((_) => ThemeColors.onSecondary),
+              MaterialStateProperty.resolveWith((_) => ThemeColors.primary),
           fillColor:
               MaterialStateProperty.resolveWith((_) => ThemeColors.secondary),
           shape:

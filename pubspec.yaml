@@ -41,6 +41,8 @@ dependencies:
   flutter_svg: ^2.0.7
   getwidget: ^3.1.1
   blurrycontainer: ^1.0.2
+  pressable: ^0.5.0
+  indexed: ^0.0.8
 
 dev_dependencies:
   flutter_test:

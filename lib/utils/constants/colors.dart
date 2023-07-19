@@ -3,14 +3,12 @@ import 'package:flutter/material.dart';
 class ThemeColors {
   static const Color background = Color(0xffedf3ff);
   static const Color primary = Color(0xffc8102e);
-  static const Color onPrimary = Color(0x1Ff95F80);
   static const Color secondary = Color(0xff012169);
-  static const Color onSecondary = Color(0xff000000);
-  static const Color input = Color(0xFFF6F7F9);
-  static const Color label = Color(0xFFACADAF);
+  static const Color label = Color(0xFFFFFFFF);
   static const Color border = Color(0xFF3E3E3E);
   static const Color counterColor = Color(0xFF2A9918);
   static const Color progressBarColor = Color.fromARGB(128, 1, 33, 105);
+
   static const Gradient gradient1 = LinearGradient(
     begin: Alignment.centerLeft,
     end: Alignment.centerRight,

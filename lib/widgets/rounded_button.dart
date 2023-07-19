@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:red_squirrel/utils/constants/test_style.dart';
 
 class RoundedButton extends StatelessWidget {
   final String text;
@@ -36,11 +37,11 @@ class RoundedButton extends StatelessWidget {
               color: Colors.transparent,
               width: 2,
             ),
-      textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
+      textStyle: CustomTextStyle.LabelText(),
       shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(24))),
     );
-    return OutlinedButton(
+    return ElevatedButton(
       style: buttonStyle,
       onPressed: (!disabled
           ? () {
