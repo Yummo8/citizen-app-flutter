@@ -7,6 +7,7 @@ import 'package:red_squirrel/utils/constants/fonts.dart';
 import 'package:red_squirrel/utils/constants/resources.dart';
 import 'package:red_squirrel/utils/constants/strings.dart';
 import 'package:red_squirrel/utils/constants/test_style.dart';
+import 'package:red_squirrel/views/full_test/test_page.dart';
 import 'package:red_squirrel/widgets/Rounded_button.dart';
 
 class FullTestSection extends StatelessWidget {
@@ -38,7 +39,9 @@ class FullTestSection extends StatelessWidget {
               right: 0,
               bottom: 0,
               child: RoundedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push<void>(FullTestPage.route());
+                  },
                   text: Strings.homeStartButton,
                   outlined: true,
                   foregroundColor: Theme.of(context).colorScheme.secondary)),
