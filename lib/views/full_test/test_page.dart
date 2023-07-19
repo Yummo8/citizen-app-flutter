@@ -20,6 +20,8 @@ class FullTestPage extends StatefulWidget {
   });
 
   static Page<void> page() => const MaterialPage<void>(child: FullTestPage());
+  static Route<void> route() =>
+      MaterialPageRoute<void>(builder: (_) => const FullTestPage());
 
   @override
   _FullTestPage createState() => _FullTestPage();
