@@ -6,6 +6,8 @@ class ThemeColors {
   static const Color secondary = Color(0xff012169);
   static const Color label = Color(0xFFFFFFFF);
   static const Color border = Color(0xFF3E3E3E);
+  static const Color counterColor = Color(0xFF2A9918);
+  static const Color progressBarColor = Color.fromARGB(128, 1, 33, 105);
 
   static const Gradient gradient1 = LinearGradient(
     begin: Alignment.centerLeft,
