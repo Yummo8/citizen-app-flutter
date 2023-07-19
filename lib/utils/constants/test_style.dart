@@ -59,18 +59,23 @@ class CustomTextStyle {
           fontFamily: fontFamily,
           shadows: shadows);
 
-  static TextStyle DescText(
-          [Color textColor = ThemeColors.secondary,
-          double fontSize = 20,
-          FontWeight fontWeight = FontWeight.w700,
-          String fontFamily = Fonts.primaryFont,
-          List<Shadow> shadows = const []]) =>
+  static TextStyle DescText([
+    Color textColor = ThemeColors.secondary,
+    double fontSize = 20,
+    FontWeight fontWeight = FontWeight.w700,
+    String fontFamily = Fonts.primaryFont,
+    List<Shadow> shadows = const [],
+    double height = 1,
+    double letterSpacing = 0,
+  ]) =>
       TextStyle(
           color: textColor,
           fontWeight: fontWeight,
           fontSize: fontSize,
           fontFamily: fontFamily,
-          shadows: shadows);
+          shadows: shadows,
+          height: height,
+          letterSpacing: letterSpacing);
 
   static TextStyle LabelText(
           [Color textColor = ThemeColors.secondary,

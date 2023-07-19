@@ -12,4 +12,7 @@ class Strings {
   static const String homeUpdateComment = "Question data was updated.";
   static const String homeUpdateDate = "07/12/2023";
   static const String homeUpdateButton = "Update";
+  static const String fullTestCaption = "Full test";
+  static const String submitButton = "submit";
+  static const String feedbackButton = "feedback";
 }
