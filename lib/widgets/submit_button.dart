@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:red_squirrel/utils/constants/colors.dart';
+import 'package:red_squirrel/utils/constants/test_style.dart';
 
 class SubmitButton extends StatelessWidget {
   final String text;
@@ -14,7 +15,7 @@ class SubmitButton extends StatelessWidget {
     super.key,
     // required this.onPressed,
     required this.text,
-    this.disabled = false,
+    this.disabled = true,
     this.backgroundColor = Colors.white,
     this.foregroundColor = ThemeColors.primary,
   });
@@ -26,16 +27,15 @@ class SubmitButton extends StatelessWidget {
       backgroundColor: backgroundColor,
       padding: const EdgeInsets.symmetric(horizontal: 24),
       side: BorderSide(
-        color: foregroundColor,
+        color: disabled ? foregroundColor.withAlpha(80) : foregroundColor,
         width: 2,
         style: BorderStyle.solid,
       ),
-      textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
       shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(24))),
     );
     return Container(
-        padding: EdgeInsets.symmetric(vertical: 4, horizontal: 10),
+        margin: const EdgeInsets.symmetric(vertical: 6),
         child: ElevatedButton(
             style: buttonStyle,
             onPressed: (!disabled
@@ -43,9 +43,16 @@ class SubmitButton extends StatelessWidget {
                     // onPressed();
                   }
                 : null),
-            child: Text(
-              text,
-              textAlign: TextAlign.center,
-            )));
+            child: Container(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 11, horizontal: 22),
+                child: Text(
+                  text,
+                  textAlign: TextAlign.center,
+                  style: CustomTextStyle.DescText(
+                    disabled ? foregroundColor.withAlpha(80) : foregroundColor,
+                    18,
+                  ),
+                ))));
   }
 }

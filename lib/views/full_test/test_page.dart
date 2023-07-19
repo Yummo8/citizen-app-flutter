@@ -80,6 +80,9 @@ class _FullTestPage extends State<FullTestPage> {
                       timeDuration: 250,
                     ),
                     ProgressBar(count: 24),
+                    const SizedBox(
+                      height: 26,
+                    ),
                     Expanded(
                         child: SingleChildScrollView(
                       child: Column(
@@ -100,12 +103,22 @@ class _FullTestPage extends State<FullTestPage> {
                               answer: 'Sr. Francis Chichester',
                             ),
                             AnswerButton(
-                              answer: 'Sr. Francis Chichester',
+                              answer: 'Sr. Robin Knox-Johnston',
                             ),
-                            SizedBox(
-                                width: 100,
-                                child: SubmitButton(
-                                    text: Strings.submitButton.toUpperCase()))
+                            Row(
+                              children: [
+                                const Spacer(
+                                  flex: 1,
+                                ),
+                                SizedBox(
+                                    child: SubmitButton(
+                                        text: Strings.submitButton
+                                            .toUpperCase())),
+                                const Spacer(
+                                  flex: 1,
+                                )
+                              ],
+                            )
                           ]),
                     )),
                   ]),

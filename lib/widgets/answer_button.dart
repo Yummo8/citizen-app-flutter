@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:red_squirrel/utils/constants/colors.dart';
 import 'package:red_squirrel/utils/constants/fonts.dart';
+import 'package:red_squirrel/utils/constants/test_style.dart';
 
 class AnswerButton extends StatefulWidget {
   final String answer;
@@ -42,7 +43,7 @@ class _AnswerButtonState extends State<AnswerButton> {
             // Add your button logic here
           },
           style: ElevatedButton.styleFrom(
-              padding: const EdgeInsets.symmetric(vertical: 25),
+              padding: const EdgeInsets.symmetric(vertical: 26),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(6),
                 side: BorderSide(
@@ -51,7 +52,6 @@ class _AnswerButtonState extends State<AnswerButton> {
                       Colors.grey.shade400, // Set the desired border color here
                 ),
               ),
-              // elevation: 5.0,
               backgroundColor:
                   status == true ? ThemeColors.background : Colors.white,
               foregroundColor: ThemeColors.secondary,
@@ -62,12 +62,7 @@ class _AnswerButtonState extends State<AnswerButton> {
             widget.answer,
             textAlign: TextAlign.center,
             softWrap: true,
-            style: const TextStyle(
-              fontFamily: Fonts.primaryFont,
-              color: ThemeColors.secondary,
-              fontSize: 18,
-              fontWeight: FontWeight.w400,
-            ),
+            style: CustomTextStyle.LabelText(),
           ),
         ));
   }

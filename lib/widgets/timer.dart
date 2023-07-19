@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
 import 'package:red_squirrel/utils/constants/colors.dart';
+import 'package:red_squirrel/utils/constants/test_style.dart';
 
 class CountTimer extends StatefulWidget {
   final int timeDuration;
@@ -40,7 +41,6 @@ class _CounterState extends State<CountTimer> {
     final seconds = strDigits(timeDuration % 60);
     return Container(
         width: 92,
-        height: 28,
         margin: const EdgeInsets.only(top: 2.0),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(18),
@@ -52,14 +52,12 @@ class _CounterState extends State<CountTimer> {
               Icons.alarm_sharp,
               color: Colors.white,
             ),
-            Text(
-              '$minutes:$seconds',
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 19,
-                fontWeight: FontWeight.w200,
-              ),
-            ),
+            Container(
+                padding: const EdgeInsets.symmetric(vertical: 4),
+                child: Text('$minutes:$seconds',
+                    textAlign: TextAlign.center,
+                    style: CustomTextStyle.DescText(
+                        ThemeColors.label, 18, FontWeight.w400))),
           ],
         ));
   }

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:red_squirrel/utils/constants/colors.dart';
 import 'package:red_squirrel/utils/constants/fonts.dart';
+import 'package:red_squirrel/utils/constants/test_style.dart';
 
 class QuestionLabel extends StatefulWidget {
   final String question;
@@ -29,7 +30,7 @@ class _QuestionLabelState extends State<QuestionLabel> {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(
-        top: 26,
+        top: 2,
         left: 2,
         right: 2,
       ),
@@ -51,14 +52,8 @@ class _QuestionLabelState extends State<QuestionLabel> {
           textAlign: TextAlign.left,
           softWrap: true,
           overflow: TextOverflow.fade,
-          style: const TextStyle(
-            fontFamily: Fonts.primaryFont,
-            color: ThemeColors.secondary,
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
-            height: 1.8,
-            letterSpacing: 0.2,
-          ),
+          style: CustomTextStyle.DescText(ThemeColors.secondary, 18,
+              FontWeight.w600, Fonts.primaryFont, [], 1.8, 0.2),
         ),
       ),
     );

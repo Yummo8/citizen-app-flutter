@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:red_squirrel/utils/constants/colors.dart';
 import 'package:red_squirrel/utils/constants/fonts.dart';
+import 'package:red_squirrel/utils/constants/test_style.dart';
 
 import 'dart:math';
 
@@ -71,11 +72,7 @@ class _ProgressBarState extends State<ProgressBar> {
             ),
             Text(
               '$step / $count',
-              style: TextStyle(
-                  fontFamily: Fonts.primaryFont,
-                  fontWeight: FontWeight.w900,
-                  fontSize: 20,
-                  color: widget.backgroundColor),
+              style: CustomTextStyle.DescText(),
             ),
             SizedBox(
               child: IconButton(
