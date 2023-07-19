@@ -1,4 +1,5 @@
 class Strings {
+  static const String appName = "Red Squirrel";
   static const String subTitle1 = "LIFE";
   static const String subTitle2 = "IN";
   static const String subTitle3 = "THE";
