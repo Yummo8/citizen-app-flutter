@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:red_squirrel/utils/constants/resources.dart';
+import 'package:red_squirrel/views/home/home_page.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({
@@ -22,6 +23,10 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.of(context).push<void>(HomePage.route());
+    });
+
     return SizedBox(
         width: double.infinity,
         height: double.infinity,

@@ -1,19 +1,16 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:red_squirrel/route.dart';
 import 'package:device_preview/device_preview.dart';
-import 'package:loader_overlay/loader_overlay.dart';
-import 'package:flow_builder/flow_builder.dart';
+import 'package:red_squirrel/utils/constants/strings.dart';
 import 'package:red_squirrel/utils/constants/theme.dart';
+import 'package:red_squirrel/views/splash/splash_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(DevicePreview(
     enabled: false,
-    builder: (context) => MyApp(),
+    builder: (context) => const MyApp(),
   ));
 }
 
@@ -24,7 +21,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppView();
+    return const AppView();
   }
 }
 
@@ -39,12 +36,7 @@ class AppView extends StatelessWidget implements TickerProvider {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightTheme(),
-        title: "Red Squirrel",
-        home: LoaderOverlay(
-            useDefaultLoading: false,
-            child: FlowBuilder<PageRouteState>(
-              state: getRouteState(),
-              onGeneratePages: onGenerateAppViewPages,
-            )));
+        title: Strings.appName,
+        home: const SplashPage());
   }
 }
