@@ -11,4 +11,11 @@ class Strings {
   static const String homeUpdateComment = "Question data was updated.";
   static const String homeUpdateDate = "07/12/2023";
   static const String homeUpdateButton = "Update";
+  static const String fullTest = "Full Test";
+  static const String testByChapter = "Test by Chapter";
+  static const String chapter = "Chapter ";
+  static const String two = "2 & 3";
+  static const String four = "4";
+  static const String five = "5";
+  static const String six = "6";
 }

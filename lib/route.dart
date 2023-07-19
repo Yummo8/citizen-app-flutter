@@ -1,6 +1,8 @@
 import 'package:flutter/widgets.dart';
+import 'package:red_squirrel/views/chapter_test/main_page.dart';
 import 'package:red_squirrel/views/home/home_page.dart';
 // import 'package:red_squirrel/views/splash/splash_page.dart';
+import 'package:red_squirrel/views/full_test/result_page.dart';
 
 enum PageRouteState {
   splash,
@@ -25,7 +27,7 @@ List<Page<dynamic>> onGenerateAppViewPages(
   // } else {
   //   return [HomePage.page()];
   // }
-  return [HomePage.page()];
+  return [MainPage.page()];
 }
 
 PageRouteState getRouteState() {

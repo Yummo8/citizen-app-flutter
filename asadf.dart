@@ -52,37 +52,49 @@ class _ResultPageState extends State<ResultPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.primary,
         body: Column(children: [
-          //////////// Header ///////////////
+      Expanded(
+        flex: 100,
+        child: Stack(children: [
           Container(
-            padding: const EdgeInsets.only(bottom: 15, top: 49),
-            color: Theme.of(context).colorScheme.primary,
-            alignment: Alignment.center,
-            child: Center(
-              child: Text(Strings.fullTest.toUpperCase(),
-                  style: CustomTextStyle.SectionTitle(ThemeColors.label)),
+              width: double.infinity,
+              height: 160,
+              color: Theme.of(context).colorScheme.primary,
+              child: Center(
+                child: Text(
+                  Strings.fullTest,
+                  style: CustomTextStyle.HeaderTitleText(ThemeColors.label),
+                ),
+              )),
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: -1,
+            child: Container(
+              height: 46,
+              decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(24),
+                    topRight: Radius.circular(24),
+                  ),
+                  color: Theme.of(context).colorScheme.background),
             ),
           ),
-
-          /////////////Content////////////
-          Expanded(
-            child: Stack(children: [
+        ]),
+      ),
+      Expanded(
+          flex: 400,
+          child: Stack(
+            children: [
               Container(
-                padding: const EdgeInsets.fromLTRB(12, 12, 12, 0),
-                // clipBehavior: Clip.none,
-                decoration: const BoxDecoration(
-                  color: ThemeColors.background,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(16),
-                      topRight: Radius.circular(16)),
-                ),
+                width: double.infinity,
+                height: 600,
+                color: Theme.of(context).colorScheme.background,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    SizedBox(
-                      height: 50,
-                    ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -168,7 +180,7 @@ class _ResultPageState extends State<ResultPage> {
                       ],
                     ),
                     SizedBox(
-                      height: 60,
+                      height: 40,
                     ),
                     Text(
                       "Congratulations!",
@@ -189,60 +201,15 @@ class _ResultPageState extends State<ResultPage> {
                         fontWeight: FontWeight.w300,
                       ),
                     ),
-                    Container(
-                        margin: EdgeInsetsDirectional.symmetric(vertical: 60),
+                    Expanded(
+                        flex: 30,
                         child: Stack(children: [
-                          Positioned(
-                            left: 0,
-                            right: 0,
-                            top: 0,
-                            bottom: 0,
-                            child: Center(
-                              child: SvgPicture.asset(
-                                SvgIcons.Line2,
-                                width: MediaQuery.of(context).size.width - 100,
-                                color: ThemeColors.secondary,
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            left: 0,
-                            right: 0,
-                            top: 0,
-                            bottom: 0,
-                            child: Center(
-                              child: SvgPicture.asset(
-                                SvgIcons.Line1,
-                                width: MediaQuery.of(context).size.width - 100,
-                                color: ThemeColors.secondary,
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            left: 0,
-                            right: 0,
-                            top: 0,
-                            bottom: 0,
-                            child: Center(
-                              child: SvgPicture.asset(
-                                SvgIcons.Rectangle,
-                                width: 50,
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            left: 0,
-                            right: 0,
-                            top: 0,
-                            bottom: 0,
-                            child: Center(
-                              child: SvgPicture.asset(
-                                SvgIcons.vector,
-                                width: 36,
-                                color: ThemeColors.secondary,
-                              ),
-                            ),
-                          ),
+                          Center(
+                              child: Container(
+                            margin: EdgeInsets.only(top: 40),
+                            child: _buildButtonColumn(Color(0xFF012169),
+                                Icons.local_airport_sharp, ""),
+                          )),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
@@ -259,8 +226,17 @@ class _ResultPageState extends State<ResultPage> {
                                       'Test by Chapter'),
                                 ],
                               ),
-                              SizedBox(
-                                height: 50,
+                              Divider(
+                                color: Color(0xFF012169),
+                                thickness: 3,
+                              ),
+                              Row(
+                                children: [
+                                  Container(
+                                    width: 1,
+                                    color: Color(0xFF012169),
+                                  )
+                                ],
                               ),
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -281,9 +257,8 @@ class _ResultPageState extends State<ResultPage> {
                   ],
                 ),
               ),
-            ]),
-          ),
-          ///////////  NavBar ///////////////
-        ]));
+            ],
+          )),
+    ]));
   }
 }
