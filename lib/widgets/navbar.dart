@@ -15,7 +15,7 @@ class NavBar extends StatefulWidget {
   const NavBar({
     super.key,
     this.backgroundColor = ThemeColors.secondary,
-    this.foregroundColor = ThemeColors.secondary,
+    this.foregroundColor = ThemeColors.progressBarColor,
   });
 
   @override
@@ -53,7 +53,11 @@ class _NavBarState extends State<NavBar> {
               ),
             ),
             Container(
+<<<<<<< HEAD
               margin: const EdgeInsets.fromLTRB(0, 0, 0, 4.0),
+=======
+              margin: EdgeInsets.fromLTRB(0, 0, 0, 4.0),
+>>>>>>> 8b45072ed5cb924b5c7e987baa3081bf49be569f
               decoration: BoxDecoration(
                 border: Border.all(
                   color:

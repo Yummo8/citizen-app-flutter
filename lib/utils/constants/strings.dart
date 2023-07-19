@@ -1,4 +1,5 @@
 class Strings {
+  static const String appName = "Red Squirrel";
   static const String subTitle1 = "LIFE";
   static const String subTitle2 = "IN";
   static const String subTitle3 = "THE";
@@ -18,4 +19,7 @@ class Strings {
   static const String four = "4";
   static const String five = "5";
   static const String six = "6";
+  static const String fullTestCaption = "Full test";
+  static const String submitButton = "submit";
+  static const String feedbackButton = "feedback";
 }

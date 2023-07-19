@@ -7,6 +7,7 @@ class Images {
 class SvgIcons {
   static const String checkList = "assets/icons/checklist.svg";
   static const String clock = "assets/icons/clock.svg";
+  static const String vector = "assets/icons/vector.svg";
   static const String books = "assets/icons/books.png";
   static const String vector = "assets/icons/Vector.svg";
   static const String Rectangle = "assets/icons/Rectangle-Vector.svg";

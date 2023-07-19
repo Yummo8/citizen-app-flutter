@@ -9,6 +9,8 @@ class ThemeColors {
   static const Color success = Color(0xff299917);
   static const Color failed = Color(0xffc8102e);
   static const Color Line = Color.fromARGB(255, 18, 32, 47);
+  static const Color counterColor = Color(0xFF2A9918);
+  static const Color progressBarColor = Color.fromARGB(128, 1, 33, 105);
 
   static const Gradient gradient1 = LinearGradient(
     begin: Alignment.centerLeft,
